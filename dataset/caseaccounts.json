@@ -13,7 +13,7 @@
 				"fileName": "Data Engineer Case Study - Accounts.csv",
 				"container": "case-bronze"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": ";",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
