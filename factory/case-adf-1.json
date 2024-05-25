@@ -1,0 +1,9 @@
+{
+	"name": "case-adf-1",
+	"location": "swedencentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6bec569e-2e15-4595-a1ff-9acb75b98cf7",
+		"tenantId": "87e05449-de81-4b35-92ed-a99bbf6f6219"
+	}
+}
