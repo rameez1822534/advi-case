@@ -1,0 +1,16 @@
+{
+	"name": "Snowflake1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SnowflakeV2",
+		"typeProperties": {
+			"authenticationType": "Basic",
+			"accountIdentifier": "cpkjluz-ub18424",
+			"user": "RAMEEZYOUSA1822",
+			"database": "CreditInstitution",
+			"warehouse": "COMPUTE_WH",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkNBU0UtQURGLTFfMTI3Mjg5MTItYWNhNC00ZjUxLTgzMTItOTUzMjgyNjVjOTQ0Ig0KfQ=="
+		}
+	}
+}
