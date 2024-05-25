@@ -1,0 +1,28 @@
+{
+	"name": "caseloans",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "caserawdatalink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Data Engineer Case Study - Loans.csv",
+				"container": "case-bronze"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "customer;customer_type;loan_type;country;amount;currency;exchange_rate;start_date;maturity_date;reference_date",
+				"type": "String"
+			}
+		]
+	}
+}
