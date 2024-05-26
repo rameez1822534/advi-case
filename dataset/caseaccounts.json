@@ -9,9 +9,7 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"fileName": "Data Engineer Case Study - Accounts.csv",
-				"container": "case-bronze"
+				"type": "AzureBlobStorageLocation"
 			},
 			"columnDelimiter": ";",
 			"escapeChar": "\\",
