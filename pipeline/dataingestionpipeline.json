@@ -3,108 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
-				"type": "Copy",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [
-					{
-						"name": "Source",
-						"value": "case-bronze//Data Engineer Case Study - Accounts.csv"
-					},
-					{
-						"name": "Destination",
-						"value": "PUBLIC.DIM_ACCOUNTS"
-					}
-				],
-				"typeProperties": {
-					"source": {
-						"type": "DelimitedTextSource",
-						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings",
-							"skipLineCount": 0
-						}
-					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"type": "Int16",
-									"ordinal": 1
-								},
-								"sink": {
-									"name": "ACCOUNTID",
-									"type": "Int64"
-								}
-							},
-							{
-								"source": {
-									"type": "Int16",
-									"ordinal": 2
-								},
-								"sink": {
-									"name": "ACCOUNTNUMBER",
-									"type": "NUMBER"
-								}
-							},
-							{
-								"source": {
-									"type": "String",
-									"ordinal": 3
-								},
-								"sink": {
-									"name": "ACCOUNTNAME",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"type": "String",
-									"ordinal": 4
-								},
-								"sink": {
-									"name": "ACCOUNTTYPE",
-									"type": "VARCHAR"
-								}
-							},
-							{
-								"source": {
-									"type": "String",
-									"ordinal": 5
-								},
-								"sink": {
-									"name": "REFERENCEDATE",
-									"type": "DateTime"
-								}
-							}
-						]
-					}
-				},
-				"inputs": [
-					{
-						"referenceName": "caseaccounts",
-						"type": "DatasetReference"
-					}
-				]
-			},
-			{
 				"name": "Data flow1",
 				"type": "ExecuteDataFlow",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -118,6 +18,9 @@
 					"dataflow": {
 						"referenceName": "dataflow1",
 						"type": "DataFlowReference"
+					},
+					"staging": {
+						"folderPath": ""
 					},
 					"compute": {
 						"coreCount": 8,
