@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "stageaccounts",
+				"fileName": "part-00000-d9146f74-7bf3-442f-909e-883f5c98e2a3-c000.csv",
 				"container": "case-silver"
 			},
 			"columnDelimiter": ";",
@@ -18,6 +18,22 @@
 			"firstRowAsHeader": false,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
 	}
 }
