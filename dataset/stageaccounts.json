@@ -13,7 +13,7 @@
 				"fileName": "stageaccounts",
 				"container": "case-silver"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": ";",
 			"escapeChar": "\\",
 			"firstRowAsHeader": false,
 			"quoteChar": "\""
