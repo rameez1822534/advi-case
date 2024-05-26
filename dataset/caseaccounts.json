@@ -21,7 +21,18 @@
 		},
 		"schema": [
 			{
-				"name": "account_number;amount;account_name;account_type;reference_date",
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
 				"type": "String"
 			}
 		]
