@@ -12,7 +12,7 @@
 				"type": "AzureBlobStorageLocation",
 				"container": "case-silver"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": ";",
 			"escapeChar": "\\",
 			"firstRowAsHeader": false,
 			"quoteChar": "\""
