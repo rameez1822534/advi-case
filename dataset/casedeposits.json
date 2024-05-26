@@ -20,7 +20,43 @@
 		},
 		"schema": [
 			{
-				"name": "customer;customer_type;deposit_type;country;amount;currency;exchange_rate;start_date;maturity_date;reference_date",
+				"name": "customer",
+				"type": "String"
+			},
+			{
+				"name": "customer_type",
+				"type": "String"
+			},
+			{
+				"name": "deposit_type",
+				"type": "String"
+			},
+			{
+				"name": "country",
+				"type": "String"
+			},
+			{
+				"name": "amount",
+				"type": "String"
+			},
+			{
+				"name": "currency",
+				"type": "String"
+			},
+			{
+				"name": "exchange_rate",
+				"type": "String"
+			},
+			{
+				"name": "start_date",
+				"type": "String"
+			},
+			{
+				"name": "maturity_date",
+				"type": "String"
+			},
+			{
+				"name": "reference_date",
 				"type": "String"
 			}
 		]
