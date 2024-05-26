@@ -1,0 +1,23 @@
+{
+	"name": "stagedeposits",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "caserawdatalink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "stagedeposits",
+				"container": "case-silver"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

@@ -13,7 +13,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "case-bronze//Data Engineer Case Study - Accounts.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "PUBLIC.DIM_ACCOUNTS"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
@@ -23,13 +32,8 @@
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
-						}
-					},
-					"sink": {
-						"type": "SnowflakeV2Sink",
-						"importSettings": {
-							"type": "SnowflakeImportCopyCommand"
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
 						}
 					},
 					"enableStaging": false,
@@ -48,12 +52,12 @@
 							},
 							{
 								"source": {
-									"type": "String",
+									"type": "Int16",
 									"ordinal": 2
 								},
 								"sink": {
 									"name": "ACCOUNTNUMBER",
-									"type": "Int64"
+									"type": "NUMBER"
 								}
 							},
 							{
@@ -73,7 +77,7 @@
 								},
 								"sink": {
 									"name": "ACCOUNTTYPE",
-									"type": "String"
+									"type": "VARCHAR"
 								}
 							},
 							{
@@ -94,13 +98,33 @@
 						"referenceName": "caseaccounts",
 						"type": "DatasetReference"
 					}
-				],
-				"outputs": [
-					{
-						"referenceName": "Dim_Accounts",
-						"type": "DatasetReference"
-					}
 				]
+			},
+			{
+				"name": "Data flow1",
+				"type": "ExecuteDataFlow",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "dataflow1",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
 			}
 		],
 		"annotations": []
