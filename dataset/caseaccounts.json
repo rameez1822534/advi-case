@@ -14,6 +14,7 @@
 				"container": "case-bronze"
 			},
 			"columnDelimiter": ";",
+			"rowDelimiter": "\r",
 			"escapeChar": "\\",
 			"firstRowAsHeader": false,
 			"quoteChar": "\""
