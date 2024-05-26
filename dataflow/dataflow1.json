@@ -9,10 +9,18 @@
 						"referenceName": "caseaccounts",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "accounttransform"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "stageaccounts",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "derivedColumn1"
@@ -28,9 +36,14 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 derive(Column_2 = replace(Column_2, ',', '.')\r",
-				") ~> derivedColumn1"
+				"     ignoreNoFilesFound: false,",
+				"     skipLines: 1) ~> accounttransform",
+				"accounttransform derive(Column_2 = replace(Column_2, ',', '.')\r",
+				") ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
