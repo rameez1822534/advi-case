@@ -4,8 +4,8 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"serviceEndpoint": "https://advicasestorage.blob.core.windows.net/",
-			"accountKind": "StorageV2"
+			"containerUri": "https://advicasestorage.blob.core.windows.net/case-bronze",
+			"authenticationType": "Anonymous"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/linkedservices"
