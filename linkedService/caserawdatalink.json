@@ -5,7 +5,7 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"sasUri": "https://advicasestorage.blob.core.windows.net/case-bronze?sp=r&st=2024-05-26T10:44:02Z&se=2024-05-26T18:44:02Z&spr=https&sv=2022-11-02&sr=c&sig=r7vopPEPuhyVv3j6kQV6N5G3rCBMzoStX07qMnl2e3E%3D?sp=r&st=2024-05-26T10:44:02Z&se=2024-05-26T18:44:02Z&spr=https&sv=2022-11-02&sr=c&sig=r7vopPEPuhyVv3j6kQV6N5G3rCBMzoStX07qMnl2e3E%3D"
+			"sasUri": "sp=r&st=2024-05-26T10:46:44Z&se=2024-05-26T18:46:44Z&spr=https&sv=2022-11-02&sr=c&sig=k%2FZ18DeEwyk43IKG%2FlnnvtFeBoaegU2iK4dYNUJfEuo%3D"
 		}
 	}
 }
