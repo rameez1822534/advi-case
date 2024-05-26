@@ -1,0 +1,37 @@
+{
+	"name": "Fact_Deposits",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "DEPOSITID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "TRANSACTIONID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "STARTDATE",
+				"type": "DATE"
+			},
+			{
+				"name": "MATURITYDATE",
+				"type": "DATE"
+			}
+		],
+		"typeProperties": {
+			"schema": "PUBLIC",
+			"table": "FACT_DEPOSITS"
+		}
+	}
+}

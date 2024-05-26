@@ -1,0 +1,43 @@
+{
+	"name": "Fact_Loans",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "LOANID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "TRANSACTIONID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "STARTDATE",
+				"type": "DATE"
+			},
+			{
+				"name": "MATURITYDATE",
+				"type": "DATE"
+			},
+			{
+				"name": "INTERESTRATE",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "PUBLIC",
+			"table": "FACT_LOANS"
+		}
+	}
+}

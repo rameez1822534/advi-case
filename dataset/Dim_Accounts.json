@@ -1,0 +1,41 @@
+{
+	"name": "Dim_Accounts",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "ACCOUNTID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "ACCOUNTNUMBER",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "ACCOUNTNAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "ACCOUNTTYPE",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "REFERENCEDATE",
+				"type": "DATE"
+			}
+		],
+		"typeProperties": {
+			"schema": "PUBLIC",
+			"table": "DIM_ACCOUNTS"
+		}
+	}
+}
