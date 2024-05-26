@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "deptodim",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -15,8 +15,41 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"enableStaging": false
-				}
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 1
+						}
+					},
+					"sink": {
+						"type": "SnowflakeV2Sink",
+						"importSettings": {
+							"type": "SnowflakeImportCopyCommand"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "stagedeposits",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Fact_Deposits",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []
