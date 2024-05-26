@@ -1,0 +1,31 @@
+{
+	"name": "Dim_Products",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "PRODUCTID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "PRODUCTNAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "PRODUCTTYPE",
+				"type": "VARCHAR"
+			}
+		],
+		"typeProperties": {
+			"schema": "PUBLIC",
+			"table": "DIM_PRODUCTS"
+		}
+	}
+}
