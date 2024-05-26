@@ -1,0 +1,36 @@
+{
+	"name": "dataflowdeposits",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "casedeposits",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          customer as string,",
+				"          customer_type as string,",
+				"          deposit_type as string,",
+				"          country as string,",
+				"          amount as string,",
+				"          currency as string,",
+				"          exchange_rate as string,",
+				"          start_date as string,",
+				"          maturity_date as string,",
+				"          reference_date as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1"
+			]
+		}
+	}
+}
