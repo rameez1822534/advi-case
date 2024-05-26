@@ -1,5 +1,5 @@
 {
-	"name": "dataflow1",
+	"name": "dataflowaccounts",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
@@ -38,8 +38,7 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     skipLines: 1) ~> accounttransform",
-				"accounttransform derive(Column_2 = replace(Column_2, ',', '.')\r",
-				") ~> derivedColumn1",
+				"accounttransform derive(Column_2 = replace(Column_2, ',', '.')) ~> derivedColumn1",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
@@ -51,8 +50,7 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     saveOrder: 1,",
-				"     stageInsert: true) ~> sink1"
+				"     saveOrder: 1) ~> sink1"
 			]
 		}
 	}
