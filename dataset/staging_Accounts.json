@@ -34,8 +34,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "PUBLIC",
-			"table": "DIM_ACCOUNTS"
+			"schema": "STAGING",
+			"table": "ACCOUNTS_STAGING"
 		}
 	}
 }
