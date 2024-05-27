@@ -1,5 +1,5 @@
 {
-	"name": "Dim_Accounts",
+	"name": "staging_Accounts",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Snowflake1",

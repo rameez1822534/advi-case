@@ -1,5 +1,5 @@
 {
-	"name": "depositsdimtoSF",
+	"name": "depositsstagingtoSF",
 	"properties": {
 		"activities": [
 			{
@@ -24,7 +24,7 @@
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings",
-							"skipLineCount": 1
+							"skipLineCount": 0
 						}
 					},
 					"sink": {
@@ -35,7 +35,109 @@
 					},
 					"enableStaging": false,
 					"translator": {
-						"type": "TabularTranslator"
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 1
+								},
+								"sink": {
+									"name": "CUSTOMER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 2
+								},
+								"sink": {
+									"name": "CUSTOMER_TYPE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 3
+								},
+								"sink": {
+									"name": "DEPOSIT_TYPE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 4
+								},
+								"sink": {
+									"name": "COUNTRY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 5
+								},
+								"sink": {
+									"name": "AMOUNT",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 6
+								},
+								"sink": {
+									"name": "CURRENCY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 7
+								},
+								"sink": {
+									"name": "EXCHANGE_RATE",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 8
+								},
+								"sink": {
+									"name": "START_DATE",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 9
+								},
+								"sink": {
+									"name": "MATURITY_DATE",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 10
+								},
+								"sink": {
+									"name": "REFERENCE_DATE",
+									"type": "DateTime"
+								}
+							}
+						]
 					}
 				},
 				"inputs": [
@@ -46,7 +148,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Fact_Deposits",
+						"referenceName": "staging_Deposits",
 						"type": "DatasetReference"
 					}
 				]

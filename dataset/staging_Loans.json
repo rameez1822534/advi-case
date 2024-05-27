@@ -1,5 +1,5 @@
 {
-	"name": "Fact_Loans",
+	"name": "staging_Loans",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Snowflake1",

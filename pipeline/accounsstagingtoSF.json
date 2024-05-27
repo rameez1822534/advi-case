@@ -1,5 +1,5 @@
 {
-	"name": "accounsdimtoSF",
+	"name": "accounsstagingtoSF",
 	"properties": {
 		"activities": [
 			{
@@ -97,7 +97,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Dim_Accounts",
+						"referenceName": "staging_Accounts",
 						"type": "DatasetReference"
 					}
 				]

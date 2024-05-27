@@ -1,5 +1,5 @@
 {
-	"name": "Fact_Deposits",
+	"name": "staging_Deposits",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Snowflake1",
@@ -30,8 +30,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "PUBLIC",
-			"table": "FACT_DEPOSITS"
+			"schema": "STAGING",
+			"table": "DEPOSITS_STAGING"
 		}
 	}
 }
