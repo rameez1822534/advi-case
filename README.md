@@ -93,6 +93,14 @@ Include a visual representation of the ERD (Entity Relationship Diagram) showing
 - **Total Loans by Month:** Query to aggregate total loans by month.
 - **Customer Distribution by Type:** Query to show the distribution of customers by type.
 
+## Things To Do
+1, Error Logging in ADF and Snowflake
+2, Make pipeline more moduler by including parameters
+3, More data tranformations if possible 
+4, Email notification for pipeline error
+5, Create a proper dashboard
+
+
 ## Conclusion
 
 This project demonstrates the integration of Azure Data Factory and Snowflake to create a robust and scalable data pipeline and data warehouse solution. The architecture supports future scalability, flexibility in handling business requirements, and ensures data quality and consistency.
