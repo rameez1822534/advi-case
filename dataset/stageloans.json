@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "part-00000-3917eb4c-64b3-4df3-ad8d-f3e6ca956159-c000.csv",
+				"fileName": "part-00000-18513210-e681-4384-92d9-ecd0fa349fa2-c000.csv",
 				"container": "case-platinium"
 			},
 			"columnDelimiter": ";",
