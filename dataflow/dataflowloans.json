@@ -12,7 +12,15 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "stageloans",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "derivedColumn1"
@@ -36,7 +44,11 @@
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 derive(amount = replace(amount, ',', '.'),",
 				"          exchange_rate = replace(exchange_rate, ',', '.'),",
-				"          start_date = toDate(iif(isNull(start_date), '1900-01-01', toString(start_date)), 'yyyy-MM-dd')) ~> derivedColumn1"
+				"          start_date = toDate(iif(isNull(start_date), '1900-01-01', toString(start_date)), 'yyyy-MM-dd')) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
