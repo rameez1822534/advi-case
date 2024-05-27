@@ -590,9 +590,9 @@
 				"type": "ScheduleTrigger",
 				"typeProperties": {
 					"recurrence": {
-						"frequency": "Minute",
-						"interval": 144,
-						"startTime": "2024-05-27T16:51:00",
+						"frequency": "Day",
+						"interval": 1,
+						"startTime": "2024-05-29T23:00:00",
 						"timeZone": "W. Europe Standard Time"
 					}
 				}
