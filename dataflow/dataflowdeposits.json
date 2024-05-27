@@ -44,7 +44,7 @@
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 derive(amount = replace(amount, ',', '.'),",
 				"          exchange_rate = replace(exchange_rate, ',', '.'),",
-				"          maturity_date = iif(isNull(maturity_date), '1900-01-01', maturity_date)) ~> derivedColumn1",
+				"          maturity_date = toDate(iif(isNull(maturity_date), '1900-01-01', toString(maturity_date)), 'yyyy-MM-dd')) ~> derivedColumn1",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
