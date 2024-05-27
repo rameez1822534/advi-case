@@ -36,8 +36,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "PUBLIC",
-			"table": "FACT_LOANS"
+			"schema": "STAGING",
+			"table": "LOANS_STAGING"
 		}
 	}
 }
