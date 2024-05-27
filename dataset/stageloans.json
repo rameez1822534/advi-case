@@ -13,6 +13,7 @@
 				"container": "case-platinium"
 			},
 			"columnDelimiter": ";",
+			"rowDelimiter": "\n",
 			"escapeChar": "\\",
 			"firstRowAsHeader": false,
 			"quoteChar": "\""
