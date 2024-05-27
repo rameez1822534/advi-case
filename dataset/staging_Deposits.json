@@ -9,23 +9,47 @@
 		"type": "SnowflakeV2Table",
 		"schema": [
 			{
-				"name": "DEPOSITID",
+				"name": "CUSTOMER",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "CUSTOMER_TYPE",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "DEPOSIT_TYPE",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "COUNTRY",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "AMOUNT",
 				"type": "NUMBER",
 				"precision": 38,
 				"scale": 0
 			},
 			{
-				"name": "TRANSACTIONID",
+				"name": "CURRENCY",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "EXCHANGE_RATE",
 				"type": "NUMBER",
 				"precision": 38,
 				"scale": 0
 			},
 			{
-				"name": "STARTDATE",
+				"name": "START_DATE",
 				"type": "DATE"
 			},
 			{
-				"name": "MATURITYDATE",
+				"name": "MATURITY_DATE",
+				"type": "DATE"
+			},
+			{
+				"name": "REFERENCE_DATE",
 				"type": "DATE"
 			}
 		],

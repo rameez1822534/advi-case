@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "deptodim",
+				"name": "deptostag",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
