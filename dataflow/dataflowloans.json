@@ -13,14 +13,30 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
-				"          {customer;customer_type;loan_type;country;amount;currency;exchange_rate;start_date;maturity_date;reference_date} as string",
+				"          customer as string,",
+				"          customer_type as string,",
+				"          loan_type as string,",
+				"          country as string,",
+				"          amount as string,",
+				"          currency as string,",
+				"          exchange_rate as string,",
+				"          start_date as string,",
+				"          maturity_date as date,",
+				"          reference_date as date",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive(amount = replace(amount, ',', '.'),",
+				"          exchange_rate = replace(exchange_rate, ',', '.'),",
+				"          start_date = toDate(iif(isNull(start_date), '1900-01-01', toString(start_date)), 'yyyy-MM-dd')) ~> derivedColumn1"
 			]
 		}
 	}
