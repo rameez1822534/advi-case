@@ -94,11 +94,11 @@ Include a visual representation of the ERD (Entity Relationship Diagram) showing
 - **Customer Distribution by Type:** Query to show the distribution of customers by type.
 
 ## Things To Do
-1, Error Logging in ADF and Snowflake
-2, Make pipeline more moduler by including parameters
-3, More data tranformations if possible 
-4, Email notification for pipeline error
-5, Create a proper dashboard
+- **Error Logging in ADF and Snowflake
+- **Make pipeline more moduler by including parameters
+- **More data tranformations if possible 
+- **Email notification for pipeline error
+- **Create a proper dashboard
 
 
 ## Conclusion
