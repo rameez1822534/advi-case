@@ -91,7 +91,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "MasterpipelinecopySF",
+						"referenceName": "pipeline1",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
